@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,42 +11,44 @@
 
 
 </head>
+
 <body>
-<header>
-    <nav class="nav_bar">
-        <img src="images/sun_icon.svg" alt="sun">
+    <header>
+        <nav class="nav_bar">
+            <img src="images/sun_icon.svg" alt="sun">
 
-        <div id="mode_switch">
-        <span class="placeholder"></span>
-        <span class="placeholder"></span>
+            <div id="mode_switch">
+                <span class="placeholder"></span>
+                <span class="placeholder"></span>
 
+            </div>
+            <img src="images/moon_icon.svg" alt="moon">
+
+        </nav>
+    </header>
+
+    <div id="particles-js" class="hero"></div>
+    <section id="hero" class="hero">
+        <div class="hero_content">
+            <div class="logo_container">
+                <img class="logo light" src="images/logo_lightv4.png" alt="logo-light">
+                <img class="logo dark" src="images/logo_darkv4.png" alt="logo-dark">
+            </div>
+            <h1>specify the right tone for your day</h1>
+            <button class="begin_button">begin</button>
         </div>
-        <img src="images/moon_icon.svg" alt="moon">
 
-    </nav>
-</header>
-
-<div id="particles-js" class="hero"></div>
-<section id="hero" class="hero">
-    <div class="hero_content">
-        <div class="logo_container">
-            <img class="logo light" src="images/logo_lightv4.png" alt="logo-light">
-            <img class="logo dark" src="images/logo_darkv4.png" alt="logo-dark">
-        </div>
-        <h1>specify the right tone for your day</h1>
-        <button class="begin_button">begin</button>
-    </div>
-
-</section>
+    </section>
 
 
-<script src="scripts.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        particlesJS.load("particles-js", "particles.json", function() {
+        particlesJS.load("particles-js", "particles.json", function () {
             console.log("callback - particles.js config loaded");
         });
     </script>
-    
+
 </body>
+
 </html>

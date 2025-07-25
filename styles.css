@@ -1,9 +1,10 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-:root[data-theme="light"]{
+/* custom variables for light mode customization */
+:root[data-theme="light"] {
     --bg-colour: #F4F5FF;
     --logo-colour1: #0D196B;
     --logo-colour2: #618EFF;
@@ -11,25 +12,27 @@
     --switch-bg: var(--logo-colour2);
     --switch-circle-bg: white;
     --switch-circle-pos: 0.22rem;
-    --icon-colour:var(--logo-colour2);
+    --icon-colour: var(--logo-colour2);
 }
 
-:root[data-theme="dark"]{
+/* custom variables for dark mode customization */
+:root[data-theme="dark"] {
     --bg-colour: #040404;
-    --logo-colour1:#FFFFFF;
+    --logo-colour1: #FFFFFF;
     --logo-colour2: #618EFF;
 
     --switch-bg: var(--logo-colour2);
     --switch-circle-bg: white;
     --switch-circle-pos: 3.22rem;
-    --icon-colour:var(--logo-colour2);
+    --icon-colour: var(--logo-colour2);
 }
 
-:root{
+:root {
     --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out
 }
 
-header{
+/* header content */
+header {
     padding: 0 5%;
     height: 4.0rem;
     width: 100%;
@@ -40,118 +43,14 @@ header{
     justify-content: end;
 }
 
-.nav_bar{
+.nav_bar {
     display: flex;
     gap: 0.8rem;
 }
-#hero{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero_content img{
-      max-width: 100%;     /* Image won't exceed its container */
-  height: auto;        /* Maintain aspect ratio */
-  display: block;      /* Removes bottom spacing */
-  margin: 0 auto;      /* Center horizontally */
-}
-
-.hero{
-    width: 100%;
-    height: calc(100vh - 4rem);
-    min-height: 450px;
-    background-color: var(--bg-colour);
-}
-
-.hero_content{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: -10%;
-    z-index: 5;
-}
-
-#particles-js {
-    z-index: 2;
-    position: absolute;
-    height: calc(100vh - 4rem);
-}
-
-.logo.light{
-  width: 636px;
-  transition: opacity 0.3s ease;
-}
-.logo.dark {
-  display: none;
-  width: 636px;
-  transition: opacity 0.3s ease;
-}
-[data-theme="dark"] .logo.light {
-  display: none;
-}
-[data-theme="dark"] .logo.dark {
-  display: block;
-}
-
-h1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--logo-colour1);
-    font-weight: 350;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.begin_button{
-margin-top: 4.5rem;
-    font-family: 'Fredoka', sans-serif;
-    background: linear-gradient(to right, var(--logo-colour1), var(--logo-colour2));
-    font-size: 25px;
-    border: none;
-    font-weight: 570;
-    color: white;
-    width: 120px;
-    height: 50px;
-    border-radius: 50px;
-    letter-spacing: 0.3px;
-     cursor: pointer;
-}
-.begin_button:hover{
-  transform: scale(1.05);
-  box-shadow: 0 5px 10px #9aceff;
-}
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .logo.light{
-  width: 550px;
-  transition: opacity 0.3s ease;
-}
-.logo.dark {
-  display: none;
-  width: 550px;
-  transition: opacity 0.3s ease;
-}
-h1 {
-    font-size: 1.3rem;
-}
-.begin_button{
-    width: 100px;
-    height: 40px;
-    font-size: 22px;
-}
-}
-
-@media (max-width: 600px) {
-  /* Styles for small screens */
-  .container {
-    padding: 10px;
-    flex-direction: column;
-  }
-}
 
 #mode_switch {
-    background-color: var(--switch-bg);;
+    background-color: var(--switch-bg);
+    ;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -162,7 +61,7 @@ h1 {
     transform: var(--default-transition);
 }
 
-#mode_switch::before{
+#mode_switch::before {
     content: "";
     position: absolute;
     width: 1.8rem;
@@ -174,14 +73,134 @@ h1 {
     transition: transform 0.45s ease;
 }
 
-.placeholder {
-  height: 15px;
-  width: 15px;
-  background-color: var(--switch-bg);
-  border-radius: 50%;
-  display: inline-block;
+body,
+h1,
+.hero,
+header,
+.begin_button {
+    transition: background-color 0.45s ease, color 0.45s ease;
 }
 
-body, h1, .hero, header, .begin_button {
-  transition: background-color 0.45s ease, color 0.45s ease;
+.placeholder {
+    height: 15px;
+    width: 15px;
+    background-color: var(--switch-bg);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* /* Hero section content  */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    min-height: 450px;
+    background-color: var(--bg-colour);
+}
+
+.hero_content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero_content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10%;
+    z-index: 5;
+}
+
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--logo-colour1);
+    font-weight: 350;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.begin_button {
+    margin-top: 4.5rem;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(to right, var(--logo-colour1), var(--logo-colour2));
+    font-size: 25px;
+    border: none;
+    font-weight: 570;
+    color: white;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
+
+.begin_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px #9aceff;
+}
+
+/* logo changes when switching modes */
+.logo.light {
+    width: 636px;
+    transition: opacity 0.3s ease;
+}
+
+.logo.dark {
+    display: none;
+    width: 636px;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .logo.light {
+    display: none;
+}
+
+[data-theme="dark"] .logo.dark {
+    display: block;
+}
+
+/* laptop resolution scaling */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .logo.light {
+        width: 550px;
+        transition: opacity 0.3s ease;
+    }
+
+    .logo.dark {
+        display: none;
+        width: 550px;
+        transition: opacity 0.3s ease;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .begin_button {
+        width: 100px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+/* mobile resolution scaling */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+        flex-direction: column;
+    }
+}
+
+#particles-js {
+    z-index: 2;
+    position: absolute;
+    height: calc(100vh - 4rem);
 }
