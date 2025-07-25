@@ -16,21 +16,37 @@ header{
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .hero{
     width: 100%;
     height: calc(100vh - 3.5rem);
     min-height: 450px;
-    background-color: aqua;
+    background-color: #F4F5FF;
 }
 
 .hero_content{
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: -10%;
 }
-
-.nav_bar{
-
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #0D196B;
+    font-weight: 350;
+    margin-top: 0.5rem;
+}
+.begin_button{
+    margin-top: 5rem;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(to right, #0D196B, #618EFF);
+    font-size: 22px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    width: 110px;
+    height: 40px;
+    border-radius: 50px;
 }
