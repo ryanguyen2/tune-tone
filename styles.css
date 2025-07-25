@@ -69,12 +69,26 @@ header{
 }
 .logo.dark {
   display: none;
+  width: 636px;
+  transition: opacity 0.3s ease;
 }
 [data-theme="dark"] .logo.light {
   display: none;
 }
 [data-theme="dark"] .logo.dark {
   display: block;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .logo.light{
+  width: 500px;
+  transition: opacity 0.3s ease;
+}
+.logo.dark {
+  display: none;
+  width: 500px;
+  transition: opacity 0.3s ease;
+}
 }
 
 h1{
