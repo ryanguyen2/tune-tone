@@ -19,6 +19,13 @@ header{
     justify-content: center;
 }
 
+.hero_content img{
+      max-width: 100%;     /* Image won't exceed its container */
+  height: auto;        /* Maintain aspect ratio */
+  display: block;      /* Removes bottom spacing */
+  margin: 0 auto;      /* Center horizontally */
+}
+
 .hero{
     width: 100%;
     height: calc(100vh - 3.5rem);
@@ -37,16 +44,26 @@ h1{
     color: #0D196B;
     font-weight: 350;
     margin-top: 0.5rem;
+    font-size: clamp(0rem, 5vw, 1.5rem);
 }
 .begin_button{
-    margin-top: 5rem;
+margin-top: 4.5rem;
     font-family: 'Fredoka', sans-serif;
     background: linear-gradient(to right, #0D196B, #618EFF);
-    font-size: 22px;
+    font-size: 25px;
     border: none;
-    font-weight: 600;
+    font-weight: 570;
     color: white;
-    width: 110px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     border-radius: 50px;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+  /* Styles for small screens */
+  .container {
+    padding: 10px;
+    flex-direction: column;
+  }
 }
