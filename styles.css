@@ -261,8 +261,54 @@ p{
     font-size: 0.9rem;
     font-weight: 350;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
 }
 h3{
     font-weight: 650;
     font-size: 1.3rem;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--logo-colour2);
+    
+}
+
+/* question 1, for phones */
+@media (max-width: 768px) {
+  #question_container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .multiple-choice {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .mc-btn {
+    font-size: 1rem;
+    min-height: 100px;
+    padding: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .controls img {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    width: 50px;
+    height: 50px;
+  }
 }
