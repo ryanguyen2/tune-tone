@@ -14,10 +14,10 @@
 
 <body>
     <header>
-        <nav class="nav_bar">
+        <nav class="nav-bar">
             <img src="images/sun_icon.svg" alt="sun">
 
-            <div id="mode_switch">
+            <div id="mode-switch">
                 <span class="placeholder"></span>
                 <span class="placeholder"></span>
 
@@ -29,17 +29,17 @@
 
     <div id="particles-js" class="hero"></div>
     <section id="hero" class="hero">
-        <div class="hero_content">
+        <div class="hero-content">
             <div class="logo_container">
                 <img class="logo light" src="images/logo_lightv4.png" alt="logo-light">
                 <img class="logo dark" src="images/logo_darkv4.png" alt="logo-dark">
             </div>
             <h1>specify the right tone for your day</h1>
-            <button class="begin_button">begin</button>
+            <button class="begin-button">begin</button>
         </div>
 
 
-        <div id="question_container" class="hide">
+        <div id="question-container" class="hide">
             <div id="question1" class="question">
                 <h2>What's your current mood?</h2>
                 <div id="answer1" class="multiple-choice">
@@ -107,28 +107,61 @@
                     </button>
                     <button id="mc3" class="mc-btn">
                         <h3>🌠 RNB</h3>
-                        
+
                     </button>
                     <button id="mc4" class="mc-btn">
                         <h3>🤠 COUNTRY</h3>
-                        
+
                     </button>
                     <button id="mc5" class="mc-btn">
                         <h3>🎸 ROCK</h3>
-                        
+
                     </button>
                     <button id="mc6" class="mc-btn">
                         <h3>🎨 INDIE</h3>
-                        
+
                     </button>
                     <button id="mc7" class="mc-btn">
                         <h3>🎧 ELECTRONIC</h3>
-                        
+
                     </button>
                     <button id="mc8" class="mc-btn">
                         <h3>🎻 CLASSICAL</h3>
-                        
+
                     </button>
+                </div>
+            </div>
+
+            <div id="question4" class="question">
+                <h2>How groovy would you like to get?</h2>
+                <div class="slider-value"><span id="default-dance">50</span></div>
+                <input type="range" id="dance-slider" min="0" max="100" value="50">
+                <div class="slider-labels">
+                    <span>Low danceability</span>
+                    <span>High danceability</span>
+                </div>
+            </div>
+
+            <div id="question5" class="question">
+                <h2>How are you feelin' for the tempo?</h2>
+                <div class="slider-value"><span id="default-tempo">50</span></div>
+                <input type="range" id="tempo-slider" min="0" max="100" value="50">
+                <div class="slider-labels">
+                    <span>slower (lower BPM)</span>
+                    <span>faster (higher BPM)</span>
+                </div>
+            </div>
+
+            <div id="question6" class="question">
+                <h2>Are we feelin' more instrumental or lyrical?</h2>
+                <div class="slider-value"><span id="default-lyrics">50</span></div>
+                <input type="range" id="lyrics-slider" min="0" max="100" value="50">
+                <div class="slider-labels">
+                    <span>less lyrics</span>
+                    <span>more lyrics</span>
+                </div>
+                <div class="submit">
+                    <button class="begin-button" class ="hide">Submit</button>
                 </div>
             </div>
 

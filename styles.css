@@ -43,12 +43,12 @@ header {
     justify-content: end;
 }
 
-.nav_bar {
+.nav-bar {
     display: flex;
     gap: 0.8rem;
 }
 
-#mode_switch {
+#mode-switch {
     background-color: var(--switch-bg);
     ;
     border-radius: 50px;
@@ -61,7 +61,7 @@ header {
     transform: var(--default-transition);
 }
 
-#mode_switch::before {
+#mode-switch::before {
     content: "";
     position: absolute;
     width: 1.8rem;
@@ -77,7 +77,7 @@ body,
 h1,
 .hero,
 header,
-.begin_button {
+.begin-button {
     transition: background-color 0.45s ease, color 0.45s ease;
 }
 
@@ -105,14 +105,14 @@ header,
     background-color: var(--bg-colour);
 }
 
-.hero_content img {
+.hero-content img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-.hero_content {
+.hero-content {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ h1 {
     font-size: 1.5rem;
 }
 
-.begin_button {
+.begin-button {
     margin-top: 4.5rem;
     font-family: 'Fredoka', sans-serif;
     background: linear-gradient(to right, var(--logo-colour1), var(--logo-colour2));
@@ -143,7 +143,7 @@ h1 {
     cursor: pointer;
 }
 
-.begin_button:hover {
+.begin-button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 10px #9aceff;
 }
@@ -185,7 +185,7 @@ h1 {
         font-size: 1.3rem;
     }
 
-    .begin_button {
+    .begin-button {
         width: 100px;
         height: 40px;
         font-size: 22px;
@@ -206,13 +206,14 @@ h1 {
 }
 
 /* questions */
-#question_container{
+#question-container{
     width: 55%;
     height: auto;
     padding: 10px;
-    background-color: #a82b2b;
+    background-color: transparent;
     z-index: 6;
 }
+
 h2{
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -273,7 +274,7 @@ h3{
 
 /* question 1, for phones */
 @media (max-width: 768px) {
-  #question_container {
+  #question-container {
     width: 90%;
     padding: 1rem;
   }
@@ -319,18 +320,19 @@ h3{
     gap: 8rem;
     height: 50px;
 }
-/* Container */
+
+
 .radio-group {
   display: flex;
   gap: 2rem;
 }
 
-/* Hide the default radio */
+
 .custom-radio input[type="radio"] {
   display: none;
 }
 
-/* Square box before label text */
+
 .custom-radio {
   position: relative;
   padding-left: 35px;
@@ -340,7 +342,7 @@ h3{
   align-items: center;
 }
 
-/* Custom square */
+
 .custom-radio .custom-box {
   position: absolute;
   top: 0;
@@ -349,10 +351,10 @@ h3{
   width: 50px;
   background-color: white;
   border: 2px var(--logo-colour2);
-  border-radius: 4px; /* use 0 for a perfect square */
+  border-radius: 4px; 
 }
 
-/* Fill box when selected */
+
 .custom-radio input[type="radio"]:checked + .custom-box {
   background-color: #2b3ea8;
   border-color: #3721b6;
@@ -366,15 +368,110 @@ h4{
     font-family: 'Fredoka';
 }
 
+.slider-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: system-ui, sans-serif;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, white, var(--logo-colour2));
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 7px solid #2b85a8;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 7px solid #2b85a8;
+  cursor: pointer;
+}
+
+.slider-value {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slider-labels{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+.slider-value{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; 
+  width: 100%;
+  height: 15px; 
+  background: transparent; 
+}
+
+/* --- Chrome / Safari --- */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 15px; 
+  background: linear-gradient(to right, white, var(--logo-colour2));
+  border-radius: 5px;
+  border: none;
+}
+
+.submit{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 #question1 {
     display: none;
 }
-.hero_content{
+.hero-content{
+    
+}
+.controls{
     display: none;
 }
 #question2{
     display: none;
 }
 #question3{
+    display: none;
+}
+#question4{
+    display:none;
+}
+#question5{
+    display: none;
+}
+#question6{
     display: none;
 }
