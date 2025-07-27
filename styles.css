@@ -34,7 +34,7 @@
 /* header content */
 header {
     padding: 0 5%;
-    height: 4.0rem;
+    height: 5.5rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -59,6 +59,14 @@ header {
 #logo-navbar-light {
     display: none;
     transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] #logo-navbar-dark {
+    display: none;
+}
+
+[data-theme="light"] #logo-navbar-light {
+    display: block;
 }
 
 .nav-bar {
@@ -208,6 +216,10 @@ h1 {
         height: 40px;
         font-size: 22px;
     }
+     .nav-bar{
+        transform: scale(0.75);
+     }
+
 }
 
 /* mobile resolution scaling */
@@ -234,7 +246,7 @@ h1 {
 }
 
 h2 {
-    color: white;
+    color: var(--logo-colour2);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.0rem;
     font-weight: 600;
@@ -273,6 +285,8 @@ h2 {
     font-size: 1.2rem;
     font-weight: 500;
     transition: all 0.2s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .mc-btn:hover {
@@ -376,6 +390,7 @@ h3 {
     background-color: white;
     border: 2px var(--logo-colour2);
     border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -438,19 +453,19 @@ input[type="range"]::-moz-range-thumb {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
-    color: #fff;
+    color: var(--logo-colour1);
 }
 
 .slider-labels {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+    color: var(--logo-colour1);
     font-weight: 550;
     font-size: 1.2rem;
 }
 
 .slider-value {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+    color: var(--logo-colour1);
     font-weight: 700;
     font-size: 1.7rem;
 }
