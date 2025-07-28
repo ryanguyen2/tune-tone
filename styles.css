@@ -4,6 +4,12 @@
     /* outline: 1px solid red; */
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--bg-colour);
+    overflow-x: hidden;
+}
 
 
 /* custom variables for light mode customization */
@@ -44,7 +50,6 @@ header {
     align-items: center;
     background-color: var(--bg-colour);
     justify-content: space-between;
-    position: fixed;
 }
 .logo-navbar {
     width: 200px;
@@ -128,10 +133,15 @@ header,
 }
 
 .hero {
-    width: 100%;
+    /* width: 100%;
     min-height: 568px;
     height: calc(100vh - 4rem);
+    background-color: var(--bg-colour); */
+        width: 100%;
+    min-height: 100vh; /* Ensures it's at least full screen */
     background-color: var(--bg-colour);
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-content img {
@@ -199,15 +209,21 @@ h1 {
 
 
 #particles-js {
-    z-index: 2;
-    position: absolute;
-    height: 100%
+    /* z-index: 2;
+    position: absolute; */
+        position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* so clicks pass through */
 }
 
 /* questions */
 #question-container {
     width: 55%;
-    height: auto;
+    /* height: 100%; */
     padding: 10px;
     background-color: transparent;
     z-index: 6;
@@ -239,6 +255,7 @@ h2 {
     gap: 20px;
     padding: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    height: 100%;
 }
 
 .mc-btn {
@@ -422,32 +439,38 @@ input[type="range"]::-webkit-slider-runnable-track {
 .hero-content{
     display: none;
 }
- #question1 {
-    display: none;
-}
-
+ 
+   #question1 {
+    /* display: none;  */
+    margin-top: -10%;
+ }    
  /* .controls {
     display: none;
-}   */
+}    */ 
 
-#question2 {
+ #question2 {
     display: none;
-}
+    margin-top: -10%;
+} 
 
 #question3 {
     display: none;
+    margin-top: -10%;
 }
 
 #question4 {
     display: none;
+    margin-top: -10%;
 }
 
 #question5 {
     display: none;
+    margin-top: -10%;
 }
 
 #question6 {
     display: none;
+    margin-top: -10%;
 } 
 
 /* laptop and desktop styles*/
