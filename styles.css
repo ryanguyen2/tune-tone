@@ -472,7 +472,7 @@ footer {
 
 
 .hero-content {
-    display: none;
+    /* display: none; */
 }
 
 #question1 {
@@ -481,7 +481,7 @@ footer {
 }
 
 .controls {
-    /* display: none; */
+    display: none;
 }
 
 #question2 {
@@ -495,7 +495,7 @@ footer {
 }
 
 #question4 {
-    /* display: none; */
+    display: none;
     margin-top: -10%;
 }
 
@@ -514,6 +514,20 @@ footer {
     .controls {
         transform: scale(0.85);
     }
+    h1{
+        transform: scale(0.75);
+    }
+    .hero-content{
+        margin-top: -25%;
+    }
+    .begin-button{
+        transform: scale(0.80);
+    }
+    .begin-button:hover {
+    transform: scale(0.85);
+
+}
+    
 
     h2 {
         font-size: 1.8rem;
@@ -647,6 +661,9 @@ footer {
 
     .controls {
         transform: scale(0.85);
+    }
+    .hero-content{
+        margin-top: -15%;
     }
 
 }
