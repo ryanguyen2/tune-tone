@@ -14,9 +14,11 @@
 
 <body>
     <header>
-        <img id="logo-navbar-dark" class="logo-navbar" src="images/logo_darkv4_compressed.png" alt="logo-dark-navbar">
-        <img id="logo-navbar-light" class="logo-navbar" src="images/logo_lightv4_compressed.png"
+        <div id="logo-nav-visibility">
+        <img id="logo-navbar-dark" class="logo-navbar" class="hide" src="images/logo_darkv4_compressed.png" alt="logo-dark-navbar">
+        <img id="logo-navbar-light" class="logo-navbar" class="hide"  src="images/logo_lightv4_compressed.png"
             alt="logo-light-navbar">
+        </div>
         <nav class="nav-bar">
             <img class="mode-switch" src="images/sun_icon.svg" alt="sun">
 
@@ -31,18 +33,18 @@
 
     <div id="particles-js"></div>
     <section id="hero" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" class="hide" id="showcase">
             <div class="logo_container">
-                <img class="logo light" src="images/logo_lightv4.png" alt="logo-light">
-                <img class="logo dark" src="images/logo_darkv4.png" alt="logo-dark">
+                <img id="logo-light" src="images/logo_lightv4.png" alt="logo-light">
+                <img id="logo-dark" src="images/logo_darkv4.png" alt="logo-dark">
             </div>
             <h1>specify the right tone for your day</h1>
-            <button class="begin-button">begin</button>
+            <button id="begin-btn" class="begin-button" class="hide">begin</button>
         </div>
 
 
         <div id="question-container" class="hide">
-            <div id="question1" class="question">
+            <div id="question1" class="question hide">
                 <h2>What's your current mood?</h2>
                 <div id="answer1" class="multiple-choice">
                     <button id="mc1" class="mc-btn">
@@ -80,7 +82,7 @@
                 </div>
             </div>
 
-            <div id="question2" class="question">
+            <div id="question2" class="question hide">
                 <h2>Would you like to match or change this mood?</h2>
                 <div id="answer2" class="checkbox">
                     <label class="custom-radio">
@@ -98,7 +100,7 @@
             </div>
 
 
-            <div id="question3" class="question">
+            <div id="question3" class="question hide">
                 <h2>What's your favourite genre?</h2>
                 <div id="answer3" class="multiple-choice">
                     <button id="mc1" class="mc-btn">
@@ -134,7 +136,7 @@
                 </div>
             </div>
 
-            <div id="question4" class="question">
+            <div id="question4" class="question hide">
                 <h2>💃 How groovy would you like to get?</h2>
                 <div class="slider-value"><span id="default-dance">50</span></div>
                 <input type="range" id="dance-slider" min="0" max="100" value="50">
@@ -144,7 +146,7 @@
                 </div>
             </div>
 
-            <div id="question5" class="question">
+            <div id="question5" class="question hide">
                 <h2>⏩ How are you feelin' for the tempo?</h2>
                 <div class="slider-value"><span id="default-tempo">50</span></div>
                 <input type="range" id="tempo-slider" min="0" max="100" value="50">
@@ -154,7 +156,7 @@
                 </div>
             </div>
 
-            <div id="question6" class="question">
+            <div id="question6" class="question hide">
                 <h2>🎺 Are we feelin' more instrumental or lyrical?</h2>
                 <div class="slider-value"><span id="default-lyrics">50</span></div>
                 <input type="range" id="lyrics-slider" min="0" max="100" value="50">
@@ -163,14 +165,14 @@
                     <span>more lyrics</span>
                 </div>
                 <div class="submit">
-                    <button class="begin-button" class="hide">Submit</button>
+                    <button id="submit-btn" class="begin-button" class="hide">Submit</button>
                 </div>
             </div>
 
 
-            <div class="controls">
-                <img src="images/prev-icon.svg" alt="prev">
-                <img src="images/next-icon.svg" alt="next">
+            <div class="controls hide" id="controls">
+                <img id="prev-btn" class="hide" src="images/prev-icon.svg" alt="prev">
+                <img id="next-btn" class="hide" src="images/next-icon.svg" alt="next">
             </div>
         </div>
 

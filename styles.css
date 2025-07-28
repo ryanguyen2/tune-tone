@@ -56,12 +56,14 @@ header {
     justify-content: space-between;
 }
 
+#logo-nav-visibility{
+visibility: hidden;
+}
 .logo-navbar {
     width: 200px;
     height: auto;
     position: relative;
     margin-top: -15px;
-    visibility: hidden;
 }
 
 /* logo changes when switching modes */
@@ -194,22 +196,21 @@ h1 {
 }
 
 /* logo changes when switching modes */
-.logo.light {
+#logo-light {
     width: 636px;
     transition: opacity 0.3s ease;
 }
 
-.logo.dark {
-    display: none;
+#logo-dark {
     width: 636px;
     transition: opacity 0.3s ease;
 }
 
-[data-theme="dark"] .logo.light {
+[data-theme="dark"] #logo-light {
     display: none;
 }
 
-[data-theme="dark"] .logo.dark {
+[data-theme="dark"] #logo-dark {
     display: block;
 }
 
@@ -474,38 +475,40 @@ footer {
 .hero-content {
     /* display: none; */
 }
-
+.question{
+    /* display: none; */
+}
 #question1 {
-    display: none;
+    /* display: none; */
     margin-top: -(10%);
 }
 
 .controls {
-    display: none;
+    /* display: none; */
 }
 
 #question2 {
-    display: none;
+    /* display: none; */
     margin-top: -10%;
 }
 
 #question3 {
-    display: none;
+    /* display: none; */
     margin-top: -10%;
 }
 
 #question4 {
-    display: none;
+    /* display: none; */
     margin-top: -10%;
 }
 
 #question5 {
-    display: none;
+    /* display: none; */
     margin-top: -10%;
 }
 
 #question6 {
-    display: none;
+    /* display: none; */
     margin-top: -10%;
 }
 
@@ -666,4 +669,11 @@ footer {
         margin-top: -15%;
     }
 
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }
