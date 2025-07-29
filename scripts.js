@@ -36,6 +36,7 @@ lyricsSlider.addEventListener('input', () => {
 const startButton = document.getElementById('begin-btn')
 const nextButton = document.getElementById('next-btn')
 const prevButton = document.getElementById('prev-btn')
+const submitButton = document.getElementById('submit-btn')
 const questions = document.querySelectorAll('.question')
 nextButton.addEventListener('click', nextQuestion)
 if (prevButton) {
@@ -68,6 +69,7 @@ function nextQuestion() {
         // Hide the question container and controls
         questions[currentQuestionIndex].classList.remove('hide');
         nextButton.classList.add('hide');
+        submitButton.classList.remove('hide')
         console.log("end")
         return;
     }
